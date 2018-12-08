@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>현재 창에 문서 불러오기</h1>
+	<p>아래 버튼을 눌러 새로운 문서를 연 후에 브라우저의 뒤로가기 버튼을 눌러보세요!</p>
+	<button onclick="openDocument()">새로운 문서 열기</button>
+	<button onclick="openDocumentWithReplace()">이전 문서 삭제 후 새로운 문서 열기</button>
+	<script>
+		function openDocument() {
+			loacation.assign("location_href.html");
+		}
+		function openDocumentWithReplace() {
+			location.replace("location_href.html");
+		}
+	</script>
+</body>
+</html>

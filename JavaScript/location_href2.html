@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript BOM Location Object</title>
+</head>
+<body>
+	<script>
+		function sendit(num) {
+			if(num == 1) {
+				location.href="http://www.naver.com";
+			} else if (num == 2) {
+				location.href="http://www.google.co.kr";
+			} else if (num == 3) {
+				location.href="http://www.daum.net";
+			}
+		}
+	</script>
+
+	<input type="button" value="네이버" onclick="sendit(1)">
+	<input type="button" value="구글" onclick="sendit(2)">
+	<input type="button" value="다음" onclick="sendit(3)">
+
+</body>
+</html>

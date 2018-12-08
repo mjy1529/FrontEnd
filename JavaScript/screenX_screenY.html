@@ -1,0 +1,19 @@
+<!--
+screenX는 해당 브라우저 창의 왼쪽 모서리와 사용자 스크린의 왼쪽 모서리 사이의 거리를 반환
+screenY는 해당 브라우저 창의 위쪽 모서리와 사용자 스크린의 위쪽 모서리 사이의 거리를 반환
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript BOM Window Object</title>
+</head>
+<body>
+	<h1>window 접두사의 생략</h1>
+	<script>
+		alert("전역 함수 호출 시 window 접두사 생략 가능함!");
+		document.write("현재 브라우저의 수평 위치는 " + screenX +"입니다.<br>");
+		document.write("현재 브라우저의 수직 위치는 " + screenY +"입니다.<br>");
+	</script>
+</body>
+</html>

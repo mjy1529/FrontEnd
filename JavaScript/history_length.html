@@ -1,0 +1,26 @@
+<!--
+History 객체
+브라우저의 히스토리 정보를 문서와 문서 상태 목록으로 저장하는 객체
+
+히스토리 목록의 개수
+history 객체의 length 프로퍼티는 브라우저 히스토리 목록의 개수를 반환1
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript BOM History Object</title>
+</head>
+<body>
+	<h1>히스토리 목록의 개수</h1>
+	<p>아래 버튼을 눌러 새로운 문서를 연 후에 브라우저의 뒤로 가기 버튼을 눌러보세요!</p>
+	<button onclick="openDocument()">새로운 문서 열기</button>
+	<p id="text"></p>
+	<script>
+		function openDocument() {
+			location.assign("location_replace.html");
+		}
+		document.getElementById("text").innerHTML = "현재 브라우저의 히스토리 목록의 갯수는 " + history.length +"개 입니다.";
+	</script>
+</body>
+</html>
