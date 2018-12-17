@@ -1,0 +1,30 @@
+<!--
+교체할 노드 = 부모노드.replaceChild(새로운 자식노드, 기존 자식노드);
+
+1. 새로운 자식 노드 : 자식 노드 리스트에 새롭게 추가할 요소 노드를 전달
+2. 기존 자식 노드 : 자식 노드 리스트에서 제거할 요소 노드 전달
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>요소 노드의 교체</h1>
+	<div id="parent">
+		<p id="first">첫 번째 요소입니다.</p>
+		<p>두 번째 요소입니다.</p>
+	</div>
+	<p id="third">세 번째 요소입니다.</p>
+	<button onclick="changeNode()">요소 노드 교체!</button>
+	<script>
+		var parent = document.getElementById("parent");
+		var first = document.getElementById("first");
+		var third = document.getElementById("third");
+		function changeNode() {
+			parent.replaceChild(third, first); //first 요소를 삭제하고, 그 대신 third 요소를 삽입함
+		}
+	</script>
+</body>
+</html>

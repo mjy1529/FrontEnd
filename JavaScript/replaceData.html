@@ -1,0 +1,21 @@
+<!--
+텍스트노드.replaceData(오프셋, 교체할 문자수, 새로운 데이터);
+오프셋 값은 0부터 시작
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Node Handle</title>
+</head>
+<body>
+	<h1>텍스트 노드의 데이터 교체</h1>
+	<p id="text">지금 시간은 오후 3시 입니다.</p>
+	<button onclick="changeText()">텍스트 교체!</button>
+	<script>
+		var text = document.getElementById("text").firstChild; //아이디가 "text"인 요소를 텍스트 노드를 선택함
+		function changeText() {
+			text.replaceData(7, 4, "저녁 7"); //텍스트 노드의 7번째 문자부터 4개의 문자를 "저녁 7"로 교체함
+		}
+	</script>
+</body>
+</html>
