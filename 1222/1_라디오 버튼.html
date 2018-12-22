@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>라디오 버튼</title>
+		<script>
+				function changeBg(color) {
+					document.bgColor = color;
+				}
+		</script>
+	</head>
+	<body>
+		<input type="radio" name="bgColor" value="yellow" onclick="changeBg(this.value)">노란색<br>
+		<input type="radio" name="bgColor" value="green" onclick="changeBg(this.value)">녹색<br>
+		<input type="radio" name="bgColor" value="blue" onclick="changeBg(this.value)">파란색<br>
+		<input type="radio" name="bgColor" value="red" onclick="changeBg(this.value)">빨강색<br>
+	</body>
+</html>

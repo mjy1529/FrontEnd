@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function add_item() {
+				var div = document.createElement('div');
+				div.innerHTML = document.getElementById('pre_set').innerHTML;
+				document.getElementById('field').appendChild(div);
+			}
+			function remove_item(obj) {
+				document.getElementById('field').removeChild(obj.parentNode);
+			}
+		</script>
+		<div id="pre_set" style="display:none;">
+			<input type="text" name="" value="" style="width:200px">
+			<input type="button" value="삭제" onclick="remove_item(this)">
+		</div>
+		<div id="field"></div>
+		<input type="button" value="추가" onclick="add_item()"><br>
+		추가 버튼을 눌러보세요.
+	</body>
+</html>
