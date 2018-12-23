@@ -6,15 +6,15 @@
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<script>
 			function func() {
-				createElement(); //아이디가 "para"인 HTML 요소를 생성함.
-				addAttribute(); //아이디가 "para"인 HTML 요소에 속성을 추가함.
+				createElement();
+				addAttribute();
 			}
 			function createElement() {
-				var criteriaNode = document.getElementById("text");
+				var originNode = document.getElementById("text");
 				var newNode = document.createElement("p");
 				newNode.innerHTML = "새로운 단락입니다.";
 				newNode.setAttribute("id", "para");
-				document.body.insertBefore(newNode, criteriaNode);
+				document.body.insertBefore(newNode, originNode);
 			}
 			function addAttribute() {
 				document.getElementById("para").setAttribute("style", "color:red");

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Syntax</title>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script>
+			function func() {
+				createElement();
+				addAttribute();
+			}
+			function createElement() {
+				var originNode = document.getElementById("text");
+				var newNode = document.createElement("p");
+				newNode.innerHTML = "새로운 단락입니다.";
+				newNode.setAttribute("id", "para");
+				document.body.insertBefore(newNode, originNode);
+			}
+			function addAttribute() {
+				document.getElementById("para").setAttribute("style", "color:red");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>아직 생성되지 않은 HTML 요소에 속성 추가</h1>
+		<button onclick="func()">속성 추가!</button>
+		<p id="text"></p>
+	</body>
+</html>
