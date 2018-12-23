@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Element Selection</title>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script>
+			$(function() {
+				$("p").on("click", function() {
+					$(".jquery").css("backgroundColor", "lightgray");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>클래스 선택자</h1>
+		<p class="jquery">이제부터 jQuery를 다 같이 공부해보죠!</p>
+		<p class="jquery">클래스 선택자로 특정 요소들을 한번에 선택할 수 있어요!!</p>
+		<p>마우스로 글씨를 클릭해보세요!!</p>
+	</body>
+</html>
