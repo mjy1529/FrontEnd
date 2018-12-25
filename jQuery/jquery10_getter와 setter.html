@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Element Access</title>
+		<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+		<script>
+			//.html()
+			// - getter 메소드 겸 setter 메소드
+			// - element의 text를 가져온다.
+			$(function() {
+				$("button").on("click", function() {
+					var newText = $("h1").html(); //getter
+					$("#text").html(newText); //setter
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>.html() 메소드</h1>
+		<p>아래의 버튼을 누르면 다음 단락에 새로운 텍스트를 설정할 수 있어요!!</p>
+		<button>새로운 텍스트!!</button>
+		<p id="text"></p>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Method Chaining</title>
+		<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+		<script>
+			$(function() {
+				$("button").on("click", function() {
+					$("#list")
+						.find("li")
+						.eq(1).html("두 번째 아이템을 선택했어요!")
+						.end() //바로 이전에 선택했던 요소의 집합 다시 선택
+						.eq(2).html("세 번째 아이템도 선택했어요!!");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>메소드 체이닝</h1>
+		<ul id="list">
+			<li>첫 번째 아이템이에요!</li>
+			<li>두 번째 아이템이에요!</li>
+			<li>세 번째 아이템이에요!</li>
+		</ul>
+		<button>텍스트 변경</button>
+	</body>
+</html>
