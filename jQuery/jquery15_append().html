@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Element Addition</title>
+		<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+		<script>
+			$(function() {
+				$("button").on("click", function() {
+					$("#list").append("<li>새로 추가된 네 번째 아이템이에요!</li>");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>.append() 메소드</h1>
+		<ul id="list">
+			<li>첫 번째 아이템이에요!</li>
+			<li>두 번째 아이템이에요!</li>
+			<li>세 번째 아이템이에요!</li>
+		</ul>
+		<button>아이템 추가</button>
+	</body>
+</html>
