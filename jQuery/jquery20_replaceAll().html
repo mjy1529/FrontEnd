@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Element Replace</title>
+		<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+		<script>
+			$(function() {
+				$("button").on("click", function() {
+					//replaceAll 안에 있는(클래스가 item인) 것을 firstItem으로 바꿔라!
+					$("#firstItem").replaceAll(".item");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>.replaceAll() 메소드</h1>
+		<ul>
+			<li class="item" id="firstItem">첫 번째 아이템이에요!</li>
+			<li class="item" id="secondItem">두 번째 아이템이에요!</li>
+			<li class="item" id="thirdItem">세 번째 아이템이에요!</li>
+		</ul>
+		<button>아이템 대체</button>
+	</body>
+</html>
