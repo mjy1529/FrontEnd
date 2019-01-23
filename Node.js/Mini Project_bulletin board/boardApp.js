@@ -32,16 +32,22 @@ app.use(session({
   saveUninitialized: true
 }));
 
-// var upload = multer({
-//   storage: storage,
-//   limits: { //파일 제한 10개, 1G (= 2^30)
-//     files: 10,
-//     fileSize: 1024 * 1024 * 1024;
-//   }
-// });
+//파일을 저장하기 위한 코드
+var storage = multer.diskStorage({
+  destination: function(req, file, callback) {
+    callback(null, 'upload');
+  },
+  filename: function(req, file, callback) {
+    callback(null, Date.now() + file.originalname);
+  }
+});
 
 var upload = multer({
-  destination: 'upload'
+  storage: storage,
+  limits: { //파일 제한 10개, 1G (= 2^30)
+    files: 10,
+    fileSize: 1024 * 1024 * 1024
+  }
 });
 
 //라우터 객체 생성
@@ -82,10 +88,12 @@ router.route('/process/register').post(upload.array('image', 1), function(req, r
     var file = req.files;
 
     var originalname = file[0].originalname;
+    var filename = file[0].filename;
     var mimetype = file[0].mimetype;
     var size = file[0].size;
 
     console.log('Original Name : ' + originalname);
+    console.log('File Name : ' + filename);
     console.log('MimeType : ' + mimetype);
     console.log('Size : ' + size);
 
